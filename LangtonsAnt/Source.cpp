@@ -9,9 +9,9 @@ int main() {
 	//Makes so that the rand() function randomizes with a time seed
 	srand(time(0));
 
-	int w_width = 1920;
-	int w_height = 1080;
-	int speed = 100;
+	int w_width = 800;
+	int w_height = 800;
+	int speed = 10;
 
 	sf::RenderWindow window(sf::VideoMode(w_width, w_height), "Langton's Ant");	
 
@@ -28,7 +28,7 @@ int main() {
 	sprite.setTexture(texture);
 
 	//Create the Ants
-	Ants ants(500, w_width, w_height);
+	Ants ants(100, w_width, w_height);
 
 	while (window.isOpen()) {
 
