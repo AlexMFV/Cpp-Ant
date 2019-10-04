@@ -11,6 +11,7 @@ int main() {
 
 	int w_width = 800;
 	int w_height = 800;
+	int speed = 100;
 
 	sf::RenderWindow window(sf::VideoMode(w_width, w_height), "Langton's Ant");	
 
@@ -39,15 +40,15 @@ int main() {
 		}
 
 		window.clear();
-		
-		for (int i = 0; i < ants.size; i++)
-			ants.ant_colony[i].move(&pixelBuffer);
 
+		for(int s = 0; s < speed; s++)
+			for (int i = 0; i < ants.size; i++)
+				ants.ant_colony[i].move(&pixelBuffer);
+
+		//Updates the texture to have the newly drawn img
 		texture.update(pixelBuffer);
-		sprite.setTexture(texture);
 
 		window.draw(sprite);
-
 		window.display();
 	}
 

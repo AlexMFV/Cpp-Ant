@@ -1,3 +1,5 @@
 ﻿  Source.cpp
+C:\Users\Alex\Desktop\Repos\Cpp-Ant\LangtonsAnt\Ant.h(55,19): warning C4018: '>=': signed/unsigned mismatch
+C:\Users\Alex\Desktop\Repos\Cpp-Ant\LangtonsAnt\Ant.h(55,54): warning C4018: '>=': signed/unsigned mismatch
 C:\Users\Alex\Desktop\Repos\Cpp-Ant\LangtonsAnt\Source.cpp(10,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   LangtonsAnt.vcxproj -> C:\Users\Alex\Desktop\Repos\Cpp-Ant\LangtonsAnt\x64\Debug\LangtonsAnt.exe
