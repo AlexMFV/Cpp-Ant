@@ -9,8 +9,8 @@ int main() {
 	//Makes so that the rand() function randomizes with a time seed
 	srand(time(0));
 
-	int w_width = 800;
-	int w_height = 800;
+	int w_width = 1920;
+	int w_height = 1080;
 	int speed = 100;
 
 	sf::RenderWindow window(sf::VideoMode(w_width, w_height), "Langton's Ant");	
@@ -28,7 +28,7 @@ int main() {
 	sprite.setTexture(texture);
 
 	//Create the Ants
-	Ants ants(50, w_width, w_height);
+	Ants ants(500, w_width, w_height);
 
 	while (window.isOpen()) {
 
@@ -41,6 +41,7 @@ int main() {
 
 		window.clear();
 
+		//First loop is so that it processes the moves many times before updating
 		for(int s = 0; s < speed; s++)
 			for (int i = 0; i < ants.size; i++)
 				ants.ant_colony[i].move(&pixelBuffer);

@@ -49,12 +49,16 @@ public:
 		case Dir::up: y--; break;
 		}
 
+		int sizeX = img->getSize().x;
+		int sizeY = img->getSize().y;
 
 		//Once they reach a border
 		//Method 1 - spawn in a different location (Chosen for now)
-		if (x <= 0 || x >= img->getSize().x || y <= 0 || y >= img->getSize().y){
-			x = rand() % img->getSize().x-1;
-			y = rand() % img->getSize().y-1;
+		if (x <= 0 || x >= sizeX || y <= 0 || y >= sizeY){
+			sizeX--;
+			sizeY--;
+			x = rand() % sizeX + 1;
+			y = rand() % sizeY + 1;
 		}
 
 		//Method 2 - rollback all the changes
